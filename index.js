@@ -89,7 +89,7 @@ app.post('/all-chat', async (req, res) => {
 });    
 
 app.use((req, res)=>{
-    res.send("<h1> hello </h1>");
+    res.send({msg: "online"});
 });
 
 const PORT = process.env.PORT || 4001;
