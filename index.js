@@ -46,7 +46,7 @@ async function Update(email, message, response) {
 app.post('/chat-with-ai', async (req, res) => {
     try {
         const { email, message } = req.body;
-        const response = await axios.post("https://a5f0-34-90-81-108.ngrok-free.app/chat", { email, message });
+        const response = await axios.post("https://b73d-34-138-126-178.ngrok-free.app/chat", { email, message });
 
         if(typeof response.data === 'string'){
             response.data = JSON.parse(response.data)
