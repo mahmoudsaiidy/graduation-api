@@ -12,7 +12,7 @@ const axios = require("axios");
 app.use(bodyParser.json());
 app.use(cors());
 
-mongoose.connect(process.env.dbUrl).then(r => console.log('connect to db'))
+mongoose.connect("mongodb+srv://ai:10203040@cluster0.1ipyd.mongodb.net/").then(r => console.log('connect to db'))
 .catch(e => console.log('connect faild', e));
 
 
