@@ -46,7 +46,7 @@ async function Update(email, message, response) {
 app.post('/chat-with-ai', async (req, res) => {
     try {
         const { email, message } = req.body;
-        const response = await axios.post("https://b73d-34-138-126-178.ngrok-free.app/chat", { email, message });
+        const response = await axios.post("https://5146-104-198-111-1.ngrok-free.app/chat", { email, message });
 
         if(typeof response.data === 'string'){
             response.data = JSON.parse(response.data)
@@ -88,6 +88,9 @@ app.post('/all-chat', async (req, res) => {
     }
 });    
 
+app.use((req, res)=>{
+    res.send("<h1> hello </h1>");
+});
 
 const PORT = process.env.PORT || 4001;
 app.listen(PORT, () => { console.log('online'); });
