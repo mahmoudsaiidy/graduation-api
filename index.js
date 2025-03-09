@@ -52,7 +52,7 @@ app.post('/chat-with-ai', async (req, res) => {
             response.data = JSON.parse(response.data)
         }
 
-        let filterResponse = response.data.response.replace(/\n+/g, ' ').replace(/\*/g, '');
+        let filterResponse = response.data.response.replace(/\n+/g, ' ').replace(/\*/g, '').replace(/\\/g, '');
 
         await Update(email, message, filterResponse);
         console.log(response.data);
